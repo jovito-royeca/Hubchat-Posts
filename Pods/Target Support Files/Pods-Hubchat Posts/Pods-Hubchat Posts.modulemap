@@ -1,0 +1,6 @@
+framework module Pods_Hubchat_Posts {
+  umbrella header "Pods-Hubchat Posts-umbrella.h"
+
+  export *
+  module * { export * }
+}

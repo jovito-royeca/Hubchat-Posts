@@ -1,0 +1,6 @@
+framework module Pods_Hubchat_PostsTests {
+  umbrella header "Pods-Hubchat PostsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

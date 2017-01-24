@@ -7,6 +7,9 @@
 //
 
 import XCTest
+import CoreData
+import DATAStack
+
 @testable import Hubchat_Posts
 
 class Hubchat_PostsTests: XCTestCase {
@@ -31,6 +34,10 @@ class Hubchat_PostsTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testPhotography() {
+        let dataStack = DATAStack(modelName: "Netzkino")
     }
     
 }

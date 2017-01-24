@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		116EE3C81E37352400A675FB /* Hubchat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3C61E37352400A675FB /* Hubchat.xcdatamodeld */; };
+		116EE3C91E37352400A675FB /* Hubchat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3C61E37352400A675FB /* Hubchat.xcdatamodeld */; };
+		116EE3CA1E37352400A675FB /* Hubchat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3C61E37352400A675FB /* Hubchat.xcdatamodeld */; };
+		116EE3CF1E373CF300A675FB /* Forum+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CB1E373CF300A675FB /* Forum+CoreDataClass.swift */; };
+		116EE3D01E373CF300A675FB /* Forum+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CB1E373CF300A675FB /* Forum+CoreDataClass.swift */; };
+		116EE3D11E373CF300A675FB /* Forum+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CB1E373CF300A675FB /* Forum+CoreDataClass.swift */; };
+		116EE3D21E373CF300A675FB /* Forum+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CC1E373CF300A675FB /* Forum+CoreDataProperties.swift */; };
+		116EE3D31E373CF300A675FB /* Forum+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CC1E373CF300A675FB /* Forum+CoreDataProperties.swift */; };
+		116EE3D41E373CF300A675FB /* Forum+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CC1E373CF300A675FB /* Forum+CoreDataProperties.swift */; };
+		116EE3D51E373CF300A675FB /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CD1E373CF300A675FB /* Post+CoreDataClass.swift */; };
+		116EE3D61E373CF300A675FB /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CD1E373CF300A675FB /* Post+CoreDataClass.swift */; };
+		116EE3D71E373CF300A675FB /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CD1E373CF300A675FB /* Post+CoreDataClass.swift */; };
+		116EE3D81E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CE1E373CF300A675FB /* Post+CoreDataProperties.swift */; };
+		116EE3D91E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CE1E373CF300A675FB /* Post+CoreDataProperties.swift */; };
+		116EE3DA1E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3CE1E373CF300A675FB /* Post+CoreDataProperties.swift */; };
 		119ACF771E35F66B00C1060B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119ACF761E35F66B00C1060B /* AppDelegate.swift */; };
 		119ACF791E35F66B00C1060B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119ACF781E35F66B00C1060B /* ViewController.swift */; };
 		119ACF7E1E35F66B00C1060B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119ACF7D1E35F66B00C1060B /* Assets.xcassets */; };
@@ -36,6 +51,11 @@
 
 /* Begin PBXFileReference section */
 		0A86162BB219BFEB414FEB46 /* Pods-Hubchat PostsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hubchat PostsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hubchat PostsTests/Pods-Hubchat PostsTests.release.xcconfig"; sourceTree = "<group>"; };
+		116EE3C71E37352400A675FB /* Hubchat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hubchat.xcdatamodel; sourceTree = "<group>"; };
+		116EE3CB1E373CF300A675FB /* Forum+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Forum+CoreDataClass.swift"; sourceTree = "<group>"; };
+		116EE3CC1E373CF300A675FB /* Forum+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Forum+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		116EE3CD1E373CF300A675FB /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
+		116EE3CE1E373CF300A675FB /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		119ACF731E35F66B00C1060B /* Hubchat Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hubchat Posts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		119ACF761E35F66B00C1060B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		119ACF781E35F66B00C1060B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +105,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		116EE3C31E37321400A675FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				116EE3CB1E373CF300A675FB /* Forum+CoreDataClass.swift */,
+				116EE3CC1E373CF300A675FB /* Forum+CoreDataProperties.swift */,
+				116EE3CD1E373CF300A675FB /* Post+CoreDataClass.swift */,
+				116EE3CE1E373CF300A675FB /* Post+CoreDataProperties.swift */,
+				116EE3C61E37352400A675FB /* Hubchat.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		116EE3C41E37321B00A675FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		116EE3C51E37322100A675FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		119ACF6A1E35F66B00C1060B = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +156,9 @@
 		119ACF751E35F66B00C1060B /* Hubchat Posts */ = {
 			isa = PBXGroup;
 			children = (
+				116EE3C51E37322100A675FB /* ViewModel */,
+				116EE3C41E37321B00A675FB /* View */,
+				116EE3C31E37321400A675FB /* Model */,
 				119ACF761E35F66B00C1060B /* AppDelegate.swift */,
 				119ACF781E35F66B00C1060B /* ViewController.swift */,
 				119ACF7D1E35F66B00C1060B /* Assets.xcassets */,
@@ -439,6 +488,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				119ACF791E35F66B00C1060B /* ViewController.swift in Sources */,
+				116EE3D51E373CF300A675FB /* Post+CoreDataClass.swift in Sources */,
+				116EE3D21E373CF300A675FB /* Forum+CoreDataProperties.swift in Sources */,
+				116EE3CF1E373CF300A675FB /* Forum+CoreDataClass.swift in Sources */,
+				116EE3D81E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */,
+				116EE3C81E37352400A675FB /* Hubchat.xcdatamodeld in Sources */,
 				119ACF771E35F66B00C1060B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,7 +501,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116EE3D01E373CF300A675FB /* Forum+CoreDataClass.swift in Sources */,
+				116EE3D31E373CF300A675FB /* Forum+CoreDataProperties.swift in Sources */,
+				116EE3D61E373CF300A675FB /* Post+CoreDataClass.swift in Sources */,
 				119ACF8C1E35F66B00C1060B /* Hubchat_PostsTests.swift in Sources */,
+				116EE3C91E37352400A675FB /* Hubchat.xcdatamodeld in Sources */,
+				116EE3D91E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +514,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116EE3D11E373CF300A675FB /* Forum+CoreDataClass.swift in Sources */,
+				116EE3D41E373CF300A675FB /* Forum+CoreDataProperties.swift in Sources */,
+				116EE3D71E373CF300A675FB /* Post+CoreDataClass.swift in Sources */,
 				119ACF971E35F66B00C1060B /* Hubchat_PostsUITests.swift in Sources */,
+				116EE3CA1E37352400A675FB /* Hubchat.xcdatamodeld in Sources */,
+				116EE3DA1E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +756,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		116EE3C61E37352400A675FB /* Hubchat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				116EE3C71E37352400A675FB /* Hubchat.xcdatamodel */,
+			);
+			currentVersion = 116EE3C71E37352400A675FB /* Hubchat.xcdatamodel */;
+			path = Hubchat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 119ACF6B1E35F66B00C1060B /* Project object */;
 }

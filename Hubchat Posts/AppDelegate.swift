@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import CoreData
+import DATAStack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    lazy var dataStack: DATAStack = DATAStack(modelName: "Netzkino")
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // print docs path
+        print("docsPath = \(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])")
         
         // setup the main view
         self.window = UIWindow(frame: UIScreen.main.bounds)

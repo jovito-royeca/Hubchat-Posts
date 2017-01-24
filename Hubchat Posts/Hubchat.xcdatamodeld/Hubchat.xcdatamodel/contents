@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Forum" representedClassName=".Forum" syncable="YES">
+        <attribute name="adIntegrations" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="bannedCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="blacklistedWords" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="branding" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="channels" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="createdBy" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="createdByUUID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="description_" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="hyper.remoteKey" value="description"/>
+            </userInfo>
+        </attribute>
+        <attribute name="embedded" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="flaggedCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="headerImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="joinRquestCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memberCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="moderators" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="owner" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="ownerUUID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="settings" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="slug" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Post" representedClassName=".Post" syncable="YES">
+        <attribute name="cache" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="createdBy" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="createdByUUID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entities" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="flags" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="forum" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="forumUUID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasUpVote" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDeleted_" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES">
+            <userInfo>
+                <entry key="hyper.remoteKey" value="isDeleted"/>
+            </userInfo>
+        </attribute>
+        <attribute name="isSeen" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rawContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sort" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="stats" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Forum" positionX="-63" positionY="-18" width="128" height="450"/>
+        <element name="Post" positionX="-54" positionY="-9" width="128" height="315"/>
+    </elements>
+</model>

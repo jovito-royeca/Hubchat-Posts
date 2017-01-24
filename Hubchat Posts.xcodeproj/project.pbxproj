@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		119ACF771E35F66B00C1060B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119ACF761E35F66B00C1060B /* AppDelegate.swift */; };
 		119ACF791E35F66B00C1060B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119ACF781E35F66B00C1060B /* ViewController.swift */; };
-		119ACF7C1E35F66B00C1060B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119ACF7A1E35F66B00C1060B /* Main.storyboard */; };
 		119ACF7E1E35F66B00C1060B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119ACF7D1E35F66B00C1060B /* Assets.xcassets */; };
-		119ACF811E35F66B00C1060B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119ACF7F1E35F66B00C1060B /* LaunchScreen.storyboard */; };
 		119ACF8C1E35F66B00C1060B /* Hubchat_PostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119ACF8B1E35F66B00C1060B /* Hubchat_PostsTests.swift */; };
 		119ACF971E35F66B00C1060B /* Hubchat_PostsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119ACF961E35F66B00C1060B /* Hubchat_PostsUITests.swift */; };
 		990C7DF770F4679D4764052A /* Pods_Hubchat_Posts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5013675079AD401A6D8FAC /* Pods_Hubchat_Posts.framework */; };
@@ -41,9 +39,7 @@
 		119ACF731E35F66B00C1060B /* Hubchat Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hubchat Posts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		119ACF761E35F66B00C1060B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		119ACF781E35F66B00C1060B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		119ACF7B1E35F66B00C1060B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		119ACF7D1E35F66B00C1060B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		119ACF801E35F66B00C1060B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		119ACF821E35F66B00C1060B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		119ACF871E35F66B00C1060B /* Hubchat PostsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hubchat PostsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		119ACF8B1E35F66B00C1060B /* Hubchat_PostsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hubchat_PostsTests.swift; sourceTree = "<group>"; };
@@ -116,9 +112,7 @@
 			children = (
 				119ACF761E35F66B00C1060B /* AppDelegate.swift */,
 				119ACF781E35F66B00C1060B /* ViewController.swift */,
-				119ACF7A1E35F66B00C1060B /* Main.storyboard */,
 				119ACF7D1E35F66B00C1060B /* Assets.xcassets */,
-				119ACF7F1E35F66B00C1060B /* LaunchScreen.storyboard */,
 				119ACF821E35F66B00C1060B /* Info.plist */,
 			);
 			path = "Hubchat Posts";
@@ -281,9 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119ACF811E35F66B00C1060B /* LaunchScreen.storyboard in Resources */,
 				119ACF7E1E35F66B00C1060B /* Assets.xcassets in Resources */,
-				119ACF7C1E35F66B00C1060B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,25 +474,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		119ACF7A1E35F66B00C1060B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				119ACF7B1E35F66B00C1060B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		119ACF7F1E35F66B00C1060B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				119ACF801E35F66B00C1060B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		119ACF991E35F66B00C1060B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -698,6 +671,7 @@
 				119ACF9D1E35F66B00C1060B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		119ACF9E1E35F66B00C1060B /* Build configuration list for PBXNativeTarget "Hubchat PostsTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +680,7 @@
 				119ACFA01E35F66B00C1060B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		119ACFA11E35F66B00C1060B /* Build configuration list for PBXNativeTarget "Hubchat PostsUITests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +689,7 @@
 				119ACFA31E35F66B00C1060B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

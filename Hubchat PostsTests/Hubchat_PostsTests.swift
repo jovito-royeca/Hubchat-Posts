@@ -10,6 +10,7 @@ import XCTest
 import Alamofire
 import CoreData
 import DATAStack
+import Sync
 
 @testable import Hubchat_Posts
 
@@ -37,6 +38,7 @@ class Hubchat_PostsTests: XCTestCase {
         }
     }
     
+    // MARK: Custom tests
     func testPostsAPI() {
         callAPI(PostsPath)
     }
@@ -45,6 +47,47 @@ class Hubchat_PostsTests: XCTestCase {
         callAPI(ForumPath)
     }
     
+    func testSyncDB() {
+        let ex = expectation(description: "Expecting a JSON data not nil")
+        
+        Alamofire.request(PostsPath).responseJSON { response in
+            XCTAssert(response.result.isSuccess == true)
+            
+            if let JSON = response.result.value as? [String: Any] {
+                let dataStack: DATAStack = DATAStack(modelName: "Hubchat")
+                let notifName = NSNotification.Name.NSManagedObjectContextObjectsDidChange
+                
+                dataStack.performInNewBackgroundContext { backgroundContext in
+                    
+                    NotificationCenter.default.addObserver(self, selector: #selector(Hubchat_PostsTests.changeNotification(_:)), name: notifName, object: backgroundContext)
+                    
+                    Sync.changes(JSON["posts"] as! Array,
+                                 inEntityNamed: "Post",
+                                 predicate: nil,
+                                 parent: nil,
+                                 parentRelationship: nil,
+                                 inContext: backgroundContext,
+                                 operations: .All,
+                                 completion:  { error in
+                        
+                                    NotificationCenter.default.removeObserver(self, name: notifName, object: nil)
+                    })
+                }
+
+            }
+            
+            ex.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10) { (error) in
+            if let error = error {
+                XCTFail("error: \(error)")
+            }
+        }
+    }
+    
+    
+    // MARK: Utility methods
     func callAPI(_ path: String) {
         let ex = expectation(description: "Expecting a JSON data not nil")
         
@@ -54,13 +97,11 @@ class Hubchat_PostsTests: XCTestCase {
             print("data = \(response.data!)")     // server data
             print("result = \(response.result)")   // result of response serialization
             
-            //            XCTAssertNil(error)
-            XCTAssertNotNil(response.result.value)
+            XCTAssert(response.result.isSuccess == true)
             
             if let JSON = response.result.value {
                 print("JSON: \(JSON)")
             }
-            
             
             ex.fulfill()
         }
@@ -72,4 +113,17 @@ class Hubchat_PostsTests: XCTestCase {
         }
     }
 
+    func changeNotification(_ notification: NSNotification) {
+        if let updatedObjects = notification.userInfo?[NSUpdatedObjectsKey] {
+            print("updated: \(updatedObjects)")
+        }
+        
+        if let deletedObjects = notification.userInfo?[NSDeletedObjectsKey] {
+            print("deleted: \(deletedObjects)")
+        }
+        
+        if let insertedObjects = notification.userInfo?[NSInsertedObjectsKey] {
+            print("inserted: \(insertedObjects)")
+        }
+    }
 }

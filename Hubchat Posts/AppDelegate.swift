@@ -13,7 +13,7 @@ import DATAStack
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    lazy var dataStack: DATAStack = DATAStack(modelName: "Netzkino")
+    lazy var dataStack: DATAStack = DATAStack(modelName: "Hubchat")
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

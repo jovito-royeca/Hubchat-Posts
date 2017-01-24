@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Alamofire
 import CoreData
 import DATAStack
 
@@ -36,8 +37,39 @@ class Hubchat_PostsTests: XCTestCase {
         }
     }
     
-    func testPhotography() {
-        let dataStack = DATAStack(modelName: "Netzkino")
+    func testPostsAPI() {
+        callAPI(PostsPath)
+    }
+
+    func testForumAPI() {
+        callAPI(ForumPath)
     }
     
+    func callAPI(_ path: String) {
+        let ex = expectation(description: "Expecting a JSON data not nil")
+        
+        Alamofire.request(path).responseJSON { response in
+            print("request = \(response.request!)")  // original URL request
+            print("request = \(response.response!)") // HTTP URL response
+            print("data = \(response.data!)")     // server data
+            print("result = \(response.result)")   // result of response serialization
+            
+            //            XCTAssertNil(error)
+            XCTAssertNotNil(response.result.value)
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+            
+            
+            ex.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10) { (error) in
+            if let error = error {
+                XCTFail("error: \(error)")
+            }
+        }
+    }
+
 }

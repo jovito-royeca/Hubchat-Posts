@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		114D5DA61E3740210079C077 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D5DA51E3740210079C077 /* Constants.swift */; };
+		114D5DA71E3740210079C077 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D5DA51E3740210079C077 /* Constants.swift */; };
+		114D5DA81E3740210079C077 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D5DA51E3740210079C077 /* Constants.swift */; };
 		116EE3C81E37352400A675FB /* Hubchat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3C61E37352400A675FB /* Hubchat.xcdatamodeld */; };
 		116EE3C91E37352400A675FB /* Hubchat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3C61E37352400A675FB /* Hubchat.xcdatamodeld */; };
 		116EE3CA1E37352400A675FB /* Hubchat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3C61E37352400A675FB /* Hubchat.xcdatamodeld */; };
@@ -51,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		0A86162BB219BFEB414FEB46 /* Pods-Hubchat PostsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hubchat PostsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hubchat PostsTests/Pods-Hubchat PostsTests.release.xcconfig"; sourceTree = "<group>"; };
+		114D5DA51E3740210079C077 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		116EE3C71E37352400A675FB /* Hubchat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hubchat.xcdatamodel; sourceTree = "<group>"; };
 		116EE3CB1E373CF300A675FB /* Forum+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Forum+CoreDataClass.swift"; sourceTree = "<group>"; };
 		116EE3CC1E373CF300A675FB /* Forum+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Forum+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				119ACF781E35F66B00C1060B /* ViewController.swift */,
 				119ACF7D1E35F66B00C1060B /* Assets.xcassets */,
 				119ACF821E35F66B00C1060B /* Info.plist */,
+				114D5DA51E3740210079C077 /* Constants.swift */,
 			);
 			path = "Hubchat Posts";
 			sourceTree = "<group>";
@@ -494,6 +499,7 @@
 				116EE3D81E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */,
 				116EE3C81E37352400A675FB /* Hubchat.xcdatamodeld in Sources */,
 				119ACF771E35F66B00C1060B /* AppDelegate.swift in Sources */,
+				114D5DA61E3740210079C077 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +511,7 @@
 				116EE3D31E373CF300A675FB /* Forum+CoreDataProperties.swift in Sources */,
 				116EE3D61E373CF300A675FB /* Post+CoreDataClass.swift in Sources */,
 				119ACF8C1E35F66B00C1060B /* Hubchat_PostsTests.swift in Sources */,
+				114D5DA71E3740210079C077 /* Constants.swift in Sources */,
 				116EE3C91E37352400A675FB /* Hubchat.xcdatamodeld in Sources */,
 				116EE3D91E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */,
 			);
@@ -518,6 +525,7 @@
 				116EE3D41E373CF300A675FB /* Forum+CoreDataProperties.swift in Sources */,
 				116EE3D71E373CF300A675FB /* Post+CoreDataClass.swift in Sources */,
 				119ACF971E35F66B00C1060B /* Hubchat_PostsUITests.swift in Sources */,
+				114D5DA81E3740210079C077 /* Constants.swift in Sources */,
 				116EE3CA1E37352400A675FB /* Hubchat.xcdatamodeld in Sources */,
 				116EE3DA1E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */,
 			);

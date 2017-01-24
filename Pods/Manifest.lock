@@ -1,18 +1,27 @@
 PODS:
   - Alamofire (4.3.0)
+  - DATAStack (7.0.1)
   - MBProgressHUD (1.0.0)
   - SnapKit (3.1.2)
+  - Sync (2.7.0):
+    - DATAStack (~> 7.0.1)
+    - SYNCPropertyMapper (~> 5.2.0)
+  - SYNCPropertyMapper (5.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
   - MBProgressHUD
   - SnapKit (~> 3.1.2)
+  - Sync
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  DATAStack: 9ca4ba8e8e4f389f1593ad3178d7a4d4df69d648
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  Sync: b02ce41aa8080049a2932fd7342fe189edb2298a
+  SYNCPropertyMapper: b3157f5183285c8a25ba23877b95a06ec2547e73
 
-PODFILE CHECKSUM: d82addc52f08fe768fd6a53e17f87a4a930bcd76
+PODFILE CHECKSUM: 0b0c17fc504185354a8a8f975cec78e4d21247eb
 
 COCOAPODS: 1.1.1

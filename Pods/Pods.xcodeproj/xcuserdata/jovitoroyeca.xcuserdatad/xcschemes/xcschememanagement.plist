@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DATAStack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,7 +34,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SYNCPropertyMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Sync.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,7 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>28CED2342CE29C1F718B61E43E6E384C</key>
+		<key>362D254C06CEC068D9FE20200BA7D691</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>377FCFDB2D9AC6D64621590535512E53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3F0B826AC8AC3F6295EDC64950D11C8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,22 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7E08A5A40A070C6B685CED9132FCA6C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>933EAE87C669FE143C2653482181EA84</key>
+		<key>964617D5498603BB38FC84C81A64827D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF4277E563589FDE2E0922478BCDBD89</key>
+		<key>BE232C1E5176281527A28727D04409FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CAF0A00A54EFEC49105D210D8104BFF2</key>
+		<key>C78830FFF562149B4B693AB9DB8D3DF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

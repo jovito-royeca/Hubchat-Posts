@@ -6,18 +6,21 @@ target 'Hubchat Posts' do
     pod 'Alamofire', '~> 4.3'
     pod 'MBProgressHUD'
     pod 'SnapKit', '~> 3.1.2'
+    pod 'Sync'
 end
 
 target 'Hubchat PostsTests' do
     pod 'Alamofire', '~> 4.3'
     pod 'MBProgressHUD'
     pod 'SnapKit', '~> 3.1.2'
+    pod 'Sync'
 end
 
 target 'Hubchat PostsUITests' do
     pod 'Alamofire', '~> 4.3'
     pod 'MBProgressHUD'
     pod 'SnapKit', '~> 3.1.2'
+    pod 'Sync'
 end
 
 post_install do |installer|

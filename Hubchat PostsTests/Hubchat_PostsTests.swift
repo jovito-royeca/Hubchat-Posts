@@ -40,68 +40,76 @@ class Hubchat_PostsTests: XCTestCase {
     
     // MARK: Custom tests
     func testPostsAPI() {
-        callAPI(PostsPath)
+        callAPI(PostsPath, completion: { (result: Any?, error: Error?) in
+            if let error = error {
+                print(error)
+            } else {
+                if let result = result {
+                    print(result)
+                }
+            }
+        })
     }
 
     func testForumAPI() {
-        callAPI(ForumPath)
+        callAPI(ForumPath, completion: { (result: Any?, error: Error?) in
+            if let error = error {
+                print(error)
+            } else {
+                if let result = result {
+                    print(result)
+                }
+            }
+        })
     }
     
     func testSyncDB() {
-        let ex = expectation(description: "Expecting a JSON data not nil")
-        
-        Alamofire.request(PostsPath).responseJSON { response in
-            XCTAssert(response.result.isSuccess == true)
-            
-            if let JSON = response.result.value as? [String: Any] {
-                let dataStack: DATAStack = DATAStack(modelName: "Hubchat")
-                let notifName = NSNotification.Name.NSManagedObjectContextObjectsDidChange
-                
-                dataStack.performInNewBackgroundContext { backgroundContext in
-                    
-                    NotificationCenter.default.addObserver(self, selector: #selector(Hubchat_PostsTests.changeNotification(_:)), name: notifName, object: backgroundContext)
-                    
-                    Sync.changes(JSON["posts"] as! Array,
-                                 inEntityNamed: "Post",
-                                 predicate: nil,
-                                 parent: nil,
-                                 parentRelationship: nil,
-                                 inContext: backgroundContext,
-                                 operations: .All,
-                                 completion:  { error in
-                        
-                                    NotificationCenter.default.removeObserver(self, name: notifName, object: nil)
-                    })
-                }
-
-            }
-            
-            ex.fulfill()
-        }
-        
-        waitForExpectations(timeout: 10) { (error) in
+        callAPI(PostsPath, completion: { (result: Any?, error: Error?) in
             if let error = error {
-                XCTFail("error: \(error)")
+                print(error)
+            } else {
+                if let result = result as? [String: Any] {
+                    let dataStack: DATAStack = DATAStack(modelName: "Hubchat")
+                    let notifName = NSNotification.Name.NSManagedObjectContextObjectsDidChange
+                    
+                    dataStack.performInNewBackgroundContext { backgroundContext in
+                        
+                        NotificationCenter.default.addObserver(self, selector: #selector(Hubchat_PostsTests.changeNotification(_:)), name: notifName, object: backgroundContext)
+                        
+                        Sync.changes(result["posts"] as! Array,
+                                     inEntityNamed: "Post",
+                                     predicate: nil,
+                                     parent: nil,
+                                     parentRelationship: nil,
+                                     inContext: backgroundContext,
+                                     operations: .All,
+                                     completion:  { error in
+                                        
+                                        NotificationCenter.default.removeObserver(self, name: notifName, object: nil)
+                                        
+                                        
+                        })
+                    }
+                    
+                }
             }
-        }
+        })
     }
     
     
     // MARK: Utility methods
-    func callAPI(_ path: String) {
+    func callAPI(_ path: String, completion: ((_ result: Any?, _ error: Error?) -> Void)?) {
         let ex = expectation(description: "Expecting a JSON data not nil")
         
         Alamofire.request(path).responseJSON { response in
             print("request = \(response.request!)")  // original URL request
             print("request = \(response.response!)") // HTTP URL response
-            print("data = \(response.data!)")     // server data
-            print("result = \(response.result)")   // result of response serialization
+            print("data = \(response.data!)")        // server data
+            print("result = \(response.result)")     // result of response serialization
             
             XCTAssert(response.result.isSuccess == true)
             
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
+            completion?(response.result.value, response.error)
             
             ex.fulfill()
         }
@@ -114,16 +122,16 @@ class Hubchat_PostsTests: XCTestCase {
     }
 
     func changeNotification(_ notification: NSNotification) {
-        if let updatedObjects = notification.userInfo?[NSUpdatedObjectsKey] {
-            print("updated: \(updatedObjects)")
+        if let objects = notification.userInfo?[NSUpdatedObjectsKey] {
+            print("updated: \((objects as AnyObject).count as UInt)")
         }
         
-        if let deletedObjects = notification.userInfo?[NSDeletedObjectsKey] {
-            print("deleted: \(deletedObjects)")
+        if let objects = notification.userInfo?[NSDeletedObjectsKey] {
+            print("deleted: \((objects as AnyObject).count as UInt)")
         }
         
-        if let insertedObjects = notification.userInfo?[NSInsertedObjectsKey] {
-            print("inserted: \(insertedObjects)")
+        if let objects = notification.userInfo?[NSInsertedObjectsKey] {
+            print("inserted: \((objects as AnyObject).count as UInt)")
         }
     }
 }

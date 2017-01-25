@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-@objc(Forum)
 public class Forum: NSManagedObject {
 
 }

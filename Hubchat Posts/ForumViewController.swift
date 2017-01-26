@@ -170,7 +170,7 @@ extension ForumViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         var cell:UITableViewCell?
         
-        // make sure we fetched the form already
+        // make sure we fetched the ViewModel already
         if let _ = forumViewModel {
             switch indexPath.section {
             case 0:

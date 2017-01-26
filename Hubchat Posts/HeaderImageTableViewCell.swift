@@ -30,7 +30,7 @@ class HeaderImageTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         headerImage = UIImageView(frame: frame)
-        headerImage?.contentMode = .scaleAspectFit
+        headerImage!.contentMode = .scaleAspectFit
         addSubview(headerImage!)
         
         headerImage!.snp.makeConstraints { (make) -> Void in

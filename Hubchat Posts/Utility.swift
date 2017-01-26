@@ -61,8 +61,9 @@ class Utility: NSObject {
                     if let posts = data["posts"] as? [[String: Any]] {
                         self.saveData(json: posts, toEntity: "Post", predicate: nil, completion: {
                             let predicate = NSPredicate(format: "forumUUID = %@", uuid)
+                            let sorters = [NSSortDescriptor(key: "timestamp", ascending: false)]
                             
-                            if let postArray = self.fetchData(fromEntity: "Post", predicate: predicate, sorters: nil) as? [Post] {
+                            if let postArray = self.fetchData(fromEntity: "Post", predicate: predicate, sorters: sorters) as? [Post] {
                                 completion(postArray, nil)
                             } else {
                                 completion(nil, nil)

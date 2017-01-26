@@ -30,7 +30,6 @@ class ForumViewController: UIViewController {
         tableView = UITableView(frame: view.frame)
         tableView!.dataSource = self
         tableView!.delegate = self
-        
         tableView!.register(HeaderImageTableViewCell.self, forCellReuseIdentifier: "HeaderImageCell")
         tableView!.register(ForumHeaderTableViewCell.self, forCellReuseIdentifier: "ForumHeaderCell")
         tableView!.register(PostTableViewCell.self, forCellReuseIdentifier: "PostCell")
@@ -60,10 +59,10 @@ class ForumViewController: UIViewController {
         })
     }
     
-    func makeHeaderImageTableViewCell() -> UITableViewCell {
+    func makeHeaderImageTableViewCell(forIndexPath indexPath: IndexPath) -> UITableViewCell {
         var cell:HeaderImageTableViewCell?
         
-        if let c = tableView!.dequeueReusableCell(withIdentifier: "HeaderImageCell") as? HeaderImageTableViewCell {
+        if let c = tableView!.dequeueReusableCell(withIdentifier: "HeaderImageCell", for: indexPath) as? HeaderImageTableViewCell {
             cell = c
         } else {
             cell = HeaderImageTableViewCell(style: .default, reuseIdentifier: "HeaderImageCell")
@@ -73,30 +72,34 @@ class ForumViewController: UIViewController {
             let cell = cell {
             
             forumViewModel.downloadForumHeaderImage(completion: { (image: UIImage?) in
-                cell.headerImage!.image = image
+                DispatchQueue.main.async {
+                    cell.headerImage!.image = image
+                }
             })
         }
         
         return cell!
     }
     
-    func makeHeaderTableViewCell() -> UITableViewCell {
+    func makeHeaderTableViewCell(forIndexPath indexPath: IndexPath) -> ForumHeaderTableViewCell {
         var cell:ForumHeaderTableViewCell?
         
         if let c = tableView!.dequeueReusableCell(withIdentifier: "ForumHeaderCell") as? ForumHeaderTableViewCell {
             cell = c
         } else {
-            cell = ForumHeaderTableViewCell(style: .subtitle, reuseIdentifier: "ForumHeaderCell")
+            cell = ForumHeaderTableViewCell(style: .default, reuseIdentifier: "ForumHeaderCell")
         }
         
         if let forumViewModel = forumViewModel,
             let cell = cell {
-            
+            cell.forumImage!.image = nil
             forumViewModel.downloadForumImage(completion: { (image: UIImage?) in
-                cell.imageView?.image = image
+                DispatchQueue.main.async {
+                    cell.forumImage!.image = image
+                }
             })
-            cell.textLabel?.text = forumViewModel.forum.title
-            cell.detailTextLabel?.text = forumViewModel.forum.description_
+            cell.titleLabel?.text = forumViewModel.forum.title
+            cell.descriptionLabel?.text = forumViewModel.forum.description_
         }
         
         return cell!
@@ -108,18 +111,29 @@ class ForumViewController: UIViewController {
         if let c = tableView!.dequeueReusableCell(withIdentifier: "PostCell") as? PostTableViewCell {
             cell = c
         } else {
-            cell = PostTableViewCell(style: .subtitle, reuseIdentifier: "PostCell")
+            cell = PostTableViewCell(style: .default, reuseIdentifier: "PostCell")
+            //cell!.setupUI(withFrame: tableView!.frame)
         }
         
         if let forumViewModel = forumViewModel,
             let cell = cell {
             
             let post = forumViewModel.posts[indexPath.row]
-            /*forumViewModel.downloadForumImage(completion: { (image: UIImage?) in
-                cell.imageView?.image = image
-            })*/
-            cell.textLabel?.text = post.rawContent
-            //cell.detailTextLabel?.text = forumViewModel.forum.description_
+            cell.avatarImage!.image = nil
+            forumViewModel.downloadCreatorAvatar(forPost: post, completion: { (image: UIImage?) in
+                DispatchQueue.main.async {
+                    cell.avatarImage!.image = image
+                }
+            })
+            cell.nameLabel!.text = forumViewModel.getCreatorDisplayName(forPost: post)
+            cell.descriptionLabel!.text = post.rawContent
+            cell.postImage!.image = nil
+            forumViewModel.downloadImages(forPost: post, completion: { (image: UIImage?) in
+                DispatchQueue.main.async {
+                    cell.postImage!.image = image
+                }
+            })
+            cell.upVotesLabel!.text = forumViewModel.getUpVotes(forPost: post)
         }
         
         return cell!
@@ -159,9 +173,9 @@ extension ForumViewController : UITableViewDataSource {
             case 0:
                 switch indexPath.row {
                 case 0:
-                    cell = makeHeaderImageTableViewCell()
+                    cell = makeHeaderImageTableViewCell(forIndexPath: indexPath)
                 case 1:
-                    cell = makeHeaderTableViewCell()
+                    cell = makeHeaderTableViewCell(forIndexPath: indexPath)
                 default:
                     cell = UITableViewCell()
                 }
@@ -180,5 +194,25 @@ extension ForumViewController : UITableViewDataSource {
 
 // MARK: UITableViewDelegate
 extension ForumViewController : UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var height = UITableViewAutomaticDimension
+        
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0:
+                height = tableView.frame.size.height / 4
+            case 1:
+                height = ForumHeaderViewCellHeight
+            default:
+                ()
+            }
+        case 1:
+            return PostTableViewCellHeight
+        default:
+            ()
+        }
+        
+        return height
+    }
 }

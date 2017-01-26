@@ -125,12 +125,12 @@ class ForumViewModel: NSObject {
         return nil
     }
     
-    func getCreatorDisplayName(forPost post: Post) -> String? {
+    func getCreatorUsername(forPost post: Post) -> String? {
         let p = posts[posts.index(of: post)!]
         
         if let createdBy = p.createdBy {
             if let cfVal = NSKeyedUnarchiver.unarchiveObject(with: createdBy as Data) as? Dictionary<String,AnyObject> {
-                return cfVal["displayName"] as? String
+                return cfVal["username"] as? String
             }
         }
         

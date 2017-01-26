@@ -76,6 +76,7 @@ class ForumViewController: UIViewController {
                     cell.headerImage!.image = image
                 }
             })
+            cell.selectionStyle = .none
         }
         
         return cell!
@@ -100,6 +101,7 @@ class ForumViewController: UIViewController {
             })
             cell.titleLabel?.text = forumViewModel.forum.title
             cell.descriptionLabel?.text = forumViewModel.forum.description_
+            cell.selectionStyle = .none
         }
         
         return cell!
@@ -125,7 +127,7 @@ class ForumViewController: UIViewController {
                     cell.avatarImage!.image = image
                 }
             })
-            cell.nameLabel!.text = forumViewModel.getCreatorDisplayName(forPost: post)
+            cell.nameLabel!.text = forumViewModel.getCreatorUsername(forPost: post)
             cell.descriptionLabel!.text = post.rawContent
             cell.postImage!.image = nil
             forumViewModel.downloadImages(forPost: post, completion: { (image: UIImage?) in
@@ -134,6 +136,7 @@ class ForumViewController: UIViewController {
                 }
             })
             cell.upVotesLabel!.text = forumViewModel.getUpVotes(forPost: post)
+            cell.selectionStyle = .none
         }
         
         return cell!

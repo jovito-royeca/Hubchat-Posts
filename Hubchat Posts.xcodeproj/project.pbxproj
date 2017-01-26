@@ -11,6 +11,12 @@
 		115213691E39966100F38EED /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115213671E39966100F38EED /* Utility.swift */; };
 		1152136A1E39966100F38EED /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115213671E39966100F38EED /* Utility.swift */; };
 		1152136C1E39A2D300F38EED /* UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152136B1E39A2D300F38EED /* UtilityTests.swift */; };
+		1152136E1E39B20100F38EED /* HeaderImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152136D1E39B20100F38EED /* HeaderImageTableViewCell.swift */; };
+		1152136F1E39B20100F38EED /* HeaderImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152136D1E39B20100F38EED /* HeaderImageTableViewCell.swift */; };
+		115213711E39B21E00F38EED /* ForumHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115213701E39B21E00F38EED /* ForumHeaderTableViewCell.swift */; };
+		115213721E39B21E00F38EED /* ForumHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115213701E39B21E00F38EED /* ForumHeaderTableViewCell.swift */; };
+		115213741E39B27800F38EED /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115213731E39B27800F38EED /* PostTableViewCell.swift */; };
+		115213751E39B27800F38EED /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115213731E39B27800F38EED /* PostTableViewCell.swift */; };
 		116EE3C81E37352400A675FB /* Hubchat Posts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3C61E37352400A675FB /* Hubchat Posts.xcdatamodeld */; };
 		116EE3C91E37352400A675FB /* Hubchat Posts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3C61E37352400A675FB /* Hubchat Posts.xcdatamodeld */; };
 		116EE3CA1E37352400A675FB /* Hubchat Posts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116EE3C61E37352400A675FB /* Hubchat Posts.xcdatamodeld */; };
@@ -61,6 +67,9 @@
 		0A86162BB219BFEB414FEB46 /* Pods-Hubchat PostsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hubchat PostsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hubchat PostsTests/Pods-Hubchat PostsTests.release.xcconfig"; sourceTree = "<group>"; };
 		115213671E39966100F38EED /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		1152136B1E39A2D300F38EED /* UtilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityTests.swift; sourceTree = "<group>"; };
+		1152136D1E39B20100F38EED /* HeaderImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderImageTableViewCell.swift; sourceTree = "<group>"; };
+		115213701E39B21E00F38EED /* ForumHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		115213731E39B27800F38EED /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		116EE3C71E37352400A675FB /* Hubchat Posts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Hubchat Posts.xcdatamodel"; sourceTree = "<group>"; };
 		116EE3CB1E373CF300A675FB /* Forum+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Forum+CoreDataClass.swift"; sourceTree = "<group>"; };
 		116EE3CC1E373CF300A675FB /* Forum+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Forum+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -139,6 +148,9 @@
 		116EE3C41E37321B00A675FB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				115213701E39B21E00F38EED /* ForumHeaderTableViewCell.swift */,
+				1152136D1E39B20100F38EED /* HeaderImageTableViewCell.swift */,
+				115213731E39B27800F38EED /* PostTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -523,9 +535,12 @@
 				116EE3D21E373CF300A675FB /* Forum+CoreDataProperties.swift in Sources */,
 				115213681E39966100F38EED /* Utility.swift in Sources */,
 				116EE3CF1E373CF300A675FB /* Forum+CoreDataClass.swift in Sources */,
+				1152136E1E39B20100F38EED /* HeaderImageTableViewCell.swift in Sources */,
 				116EE3D81E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */,
+				115213711E39B21E00F38EED /* ForumHeaderTableViewCell.swift in Sources */,
 				116EE3C81E37352400A675FB /* Hubchat Posts.xcdatamodeld in Sources */,
 				119ACF771E35F66B00C1060B /* AppDelegate.swift in Sources */,
+				115213741E39B27800F38EED /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,9 +570,12 @@
 				116EE3D71E373CF300A675FB /* Post+CoreDataClass.swift in Sources */,
 				1152136A1E39966100F38EED /* Utility.swift in Sources */,
 				119ACF971E35F66B00C1060B /* Hubchat_PostsUITests.swift in Sources */,
+				1152136F1E39B20100F38EED /* HeaderImageTableViewCell.swift in Sources */,
 				11978FF61E38B98700C4FECF /* ForumViewController.swift in Sources */,
+				115213721E39B21E00F38EED /* ForumHeaderTableViewCell.swift in Sources */,
 				116EE3CA1E37352400A675FB /* Hubchat Posts.xcdatamodeld in Sources */,
 				116EE3DA1E373CF300A675FB /* Post+CoreDataProperties.swift in Sources */,
+				115213751E39B27800F38EED /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

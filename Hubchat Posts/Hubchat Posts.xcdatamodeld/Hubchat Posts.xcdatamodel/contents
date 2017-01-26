@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Forum" representedClassName=".Forum" syncable="YES">
+    <entity name="Forum" representedClassName="Forum" syncable="YES">
         <attribute name="adIntegrations" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="bannedCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="blacklistedWords" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -33,7 +33,7 @@
         <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Post" representedClassName=".Post" syncable="YES">
+    <entity name="Post" representedClassName="Post" syncable="YES">
         <attribute name="cache" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="createdBy" optional="YES" attributeType="Binary" syncable="YES"/>

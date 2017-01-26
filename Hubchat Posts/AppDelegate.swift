@@ -24,9 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // setup the main view
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let mainController = ViewController() as UIViewController
+        let mainController = ForumViewController() as UIViewController
         let navigationController = UINavigationController(rootViewController: mainController)
         navigationController.navigationBar.isTranslucent = false
+        
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         

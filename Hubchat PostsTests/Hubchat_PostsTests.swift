@@ -14,6 +14,9 @@ import Sync
 
 @testable import Hubchat_Posts
 
+let ForumPath           = "\(APIBasePath)/forum/photography"
+let PostsPath           = "\(ForumPath)/post"
+
 class Hubchat_PostsTests: XCTestCase {
     
     override func setUp() {
@@ -69,7 +72,7 @@ class Hubchat_PostsTests: XCTestCase {
                 print(error)
             } else {
                 if let result = result as? [String: Any] {
-                    let dataStack: DATAStack = DATAStack(modelName: "Hubchat")
+                    let dataStack: DATAStack = DATAStack(modelName: "Hubchat Posts")
                     let notifName = NSNotification.Name.NSManagedObjectContextObjectsDidChange
                     
                     dataStack.performInNewBackgroundContext { backgroundContext in
